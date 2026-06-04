@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TELApulgadas"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-17 07:23:37 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswNjo1Njo0MyBwLsKgbS47MzM5Ng=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswNzoyMzozNyBwLsKgbS47MTszNTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TelaMetros, TotalPulgadas, Conversion, Centimetros" type="Real" array="False" size=""/>
+            <input variable="TelaMetros"/>
+            <assign variable="Conversion" expression="(TelaMetros*100)/2.54"/>
+            <output expression="Conversion" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

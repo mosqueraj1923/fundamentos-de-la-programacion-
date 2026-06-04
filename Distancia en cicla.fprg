@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Distancia en cicla"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-18 09:03:28 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xODswODo1MTo0NyBwLsKgbS47MzM5OA=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xODswOTowMzoyOCBwLsKgbS47MTszNTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Kilometro, Velocidad, Tiempo" type="Real" array="False" size=""/>
+            <output expression="&quot;Indique el Kilometraje&quot;" newline="True"/>
+            <input variable="Kilometro"/>
+            <output expression="&quot;Moviendose a una velocidad constante de 20Km/H&quot;" newline="True"/>
+            <assign variable="Velocidad" expression="20"/>
+            <assign variable="Tiempo" expression="Kilometro/Velocidad"/>
+            <output expression="&quot;el tiempo que le tomara es de &quot;&amp;Tiempo&amp;&quot; horas&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

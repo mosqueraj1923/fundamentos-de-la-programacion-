@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Teorema De Pitagoras"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-18 09:06:55 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xODswODo0Mzo0OCBhLsKgbS47MzM4NQ=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xODswOTowNjo1NSBwLsKgbS47NDszNTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Hipotenusa, CatetoAd, CatetoOp, Resultado, Conversion" type="Real" array="False" size=""/>
+            <output expression="&quot;Indique el numero del cateto Adyasente&quot;" newline="True"/>
+            <input variable="CatetoAd"/>
+            <output expression="&quot;Indique el numero de su cateto Opuesto&quot;" newline="True"/>
+            <input variable="CatetoOp"/>
+            <assign variable="Hipotenusa" expression="sqrt((CatetoAd^2) + (CatetoOp^2))"/>
+            <output expression="&quot;La Hipotenusa es: &quot; &amp;Hipotenusa&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

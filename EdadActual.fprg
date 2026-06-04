@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EdadActual"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-17 08:00:22 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswNzoyMzo0NCBwLsKgbS47MzM5Mg=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswODowMDoyMiBwLsKgbS47MTszNDky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A&#241;oActual, EdadActual, A&#241;oNacimiento" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite la fecha actual&quot;" newline="True"/>
+            <input variable="A&#241;oActual"/>
+            <output expression="&quot;Digite el a&#241;o de nacimiento&quot;" newline="True"/>
+            <input variable="A&#241;oNacimiento"/>
+            <assign variable="EdadActual" expression="A&#241;oActual-A&#241;oNacimiento"/>
+            <output expression="&quot;Su edad actual es:&quot;" newline="True"/>
+            <output expression="EdadActual" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

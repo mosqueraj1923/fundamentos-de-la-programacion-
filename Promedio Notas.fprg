@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Promedio Notas"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-17 08:41:38 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswODowMDo0NiBwLsKgbS47MzM5MA=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswODo0MTozOCBwLsKgbS47MTszNTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nota1, Nota2, Nota3, Promedio" type="Real" array="False" size=""/>
+            <output expression="&quot;Agregue la nota 1&quot;" newline="True"/>
+            <input variable="Nota1"/>
+            <output expression="&quot;Agregue la nota 2&quot;" newline="True"/>
+            <input variable="Nota2"/>
+            <output expression="&quot;Agregue la nota 3&quot;" newline="True"/>
+            <input variable="Nota3"/>
+            <assign variable="Promedio" expression="(Nota1+Nota2+Nota3)/3"/>
+            <output expression="&quot;El Promedio de su nota es:&quot;" newline="True"/>
+            <output expression="Promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

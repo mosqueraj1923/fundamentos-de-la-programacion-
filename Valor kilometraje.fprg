@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Valor kilometraje"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-17 09:26:05 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswODo0MTo0MiBwLsKgbS47MzM5MQ=="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUZSTzc1Qzk7MjAyNi0wNC0xNzswOToyNjowNSBwLsKgbS47MTszNTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Metro2, Kilometro, Valor, ValorKilometro, ValorTotal" type="Real" array="False" size=""/>
+            <input variable="ValorKilometro"/>
+            <input variable="metro2"/>
+            <input variable="Kilometro"/>
+            <assign variable="Metro2" expression="Metro2*10000"/>
+            <assign variable="Valor" expression="ValorKilometro*Kilometro"/>
+            <assign variable="ValorTotal" expression="Valor+Metro2"/>
+            <output expression="ValorTotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
