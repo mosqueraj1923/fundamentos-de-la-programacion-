@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="menu con recursividad"/>
+        <attribute name="authors" value="Estudiante"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-03 03:44:11 p.&#8239;m."/>
+        <attribute name="created" value="RXN0dWRpYW50ZTtUQk5YQ1YxMTQxNDA0Nzg7MjAyNi0wNi0yNjswNjozMjozOSBwLuKAr20uOzExNjYz"/>
+        <attribute name="edited" value="RXN0dWRpYW50ZTtUQk5YQ1YxMTQxNDA0Nzg7MjAyNi0wNi0yNjswNzoxMTo0OSBwLuKAr20uOzQ7RXN0dWRpYW50ZTtUQk5YQ1YxMTQxNDA0Nzg7MjAyNi0wNi0wNTswOToyNjoxMiBwLuKAr20uO1RyYWJham8gZmFjdG9yaWFsLmZwcmc7MjU3MTM="/>
+        <attribute name="edited" value="RXN0dWRpYW50ZTtUQk5YQ1YxMTQxNDA0Nzg7MjAyNi0wNi0yNjswODowMjo1MCBwLuKAr20uOzE7MTE3NjM="/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTgyTkgxTTE7MjAyNi0wNy0wMzswMzo0NDoxMSBwLuKAr20uOzE7MTE1Mzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="Menu"/>
+        </body>
+    </function>
+    <function name="DigitosDeUnNumero" type="Integer" variable="suma">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Modulo, Retorno, suma" type="Integer" array="False" size=""/>
+            <if expression="n &lt; 10">
+                <then>
+                    <assign variable="suma" expression="n"/>
+                </then>
+                <else>
+                    <assign variable="suma" expression="n mod(10) + DigitosDeUnNumero(n/10)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Factorial" type="Integer" variable="Factorial">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Factorial" type="Integer" array="False" size=""/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="Factorial" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="Factorial" expression="n*Factorial(n-1)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Fibonacci" type="Integer" variable="suma">
+        <parameters>
+            <parameter name="numero" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="suma, i" type="Integer" array="False" size=""/>
+            <if expression="numero &lt;= 1">
+                <then>
+                    <assign variable="suma" expression="numero"/>
+                </then>
+                <else>
+                    <assign variable="suma" expression="Fibonacci(numero-1)+Fibonacci(numero-2)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Menu" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Continuar" type="Boolean" array="False" size=""/>
+            <declare name="Opcion, Numero, i, Base, Exponente" type="Integer" array="False" size=""/>
+            <assign variable="Continuar" expression="True"/>
+            <while expression="Continuar">
+                <output expression="&quot;==== menu recursividad =====&quot;" newline="True"/>
+                <output expression="&quot;1. Fibonacci&quot;" newline="True"/>
+                <output expression="&quot;2. Suma de los digitos de un numero&quot;" newline="True"/>
+                <output expression="&quot;3. Factorial&quot;" newline="True"/>
+                <output expression="&quot;4. Potenciacion&quot;" newline="True"/>
+                <output expression="&quot;5. Arbol de 2 ramas&quot;" newline="True"/>
+                <output expression="&quot;6. Arbol de mas ramas&quot;" newline="True"/>
+                <output expression="&quot;7. Triangulo de Sierpinski&quot;" newline="True"/>
+                <output expression="&quot;8. Cuadrado alfombra Sierpinski&quot;" newline="True"/>
+                <output expression="&quot;9. Salida&quot;" newline="True"/>
+                <input variable="Opcion"/>
+                <if expression="Opcion &gt;= 9">
+                    <then>
+                        <assign variable="Continuar" expression="False"/>
+                    </then>
+                    <else>
+                        <if expression="Opcion == 1">
+                            <then>
+                                <output expression="&quot;Digite la posicion&quot;" newline="True"/>
+                                <input variable="Numero"/>
+                                <for variable="i" start="1" end="Numero" direction="inc" step="1">
+                                    <output expression="Fibonacci(i) &amp; &quot; - &quot;" newline="False"/>
+                                </for>
+                                <output expression="&quot;&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="Opcion == 2">
+                                    <then>
+                                        <output expression="&quot;Digite el numero&quot;" newline="True"/>
+                                        <input variable="Numero"/>
+                                        <output expression="&quot;La suma de los numeros hasta &quot; &amp; Numero &amp; &quot; es igual &quot; &amp; DigitosDeUnNumero(Numero)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Opcion == 3">
+                                            <then>
+                                                <output expression="&quot;Digite un numero&quot;" newline="True"/>
+                                                <input variable="Numero"/>
+                                                <output expression="&quot;EL factorial de &quot; &amp; Numero &amp; &quot; es: &quot; &amp; Factorial(Numero)" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="Opcion == 4">
+                                                    <then>
+                                                        <output expression="&quot;Digite la base &quot;" newline="True"/>
+                                                        <input variable="Base"/>
+                                                        <output expression="&quot; Digite el exponente&quot;" newline="True"/>
+                                                        <input variable="Exponente"/>
+                                                        <assign variable="i" expression="0"/>
+                                                        <output expression="&quot;El resultado de &quot; &amp; Base &amp; &quot; elevado a &quot; &amp; Exponente &amp; &quot; es: &quot; &amp; Potenciacion(Base, Exponente, i)" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="Opcion == 5">
+                                                            <then>
+                                                                <output expression="&quot;Digite la cantidad de ramas del arbol&quot;" newline="True"/>
+                                                                <input variable="Numero"/>
+                                                            </then>
+                                                            <else>
+                                                                <for variable="" start="" end="" direction="inc" step="1"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="Potenciacion" type="Integer" variable="Potenciacion ( i+1)">
+        <parameters>
+            <parameter name="Base" type="Integer" array="False"/>
+            <parameter name="Exponente" type="Integer" array="False"/>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <assign variable="i" expression="0"/>
+            <if expression="i == Exponente">
+                <then/>
+                <else>
+                    <assign variable="Base" expression="Base*Exponente"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
