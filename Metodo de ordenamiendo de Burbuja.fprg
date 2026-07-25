@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Metodo de ordenamiendo de Burbuja"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-05 04:21:55 p.&#8239;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTgyTkgxTTE7MjAyNi0wNi0wNDswNzo1OTozMyBwLuKAr20uOzExNDQ0"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTgyTkgxTTE7MjAyNi0wNi0wNDswODowNToyNyBwLuKAr20uOzE7YW5kcmU7TEFQVE9QLUlCSjZWOURKOzIwMjYtMDUtMjk7MDY6MjU6NDIgcC7igK9tLjtNZXRvZG9zICgxKS5mcHJnOzI0MzAy"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTgyTkgxTTE7MjAyNi0wNi0wNTswNDoyMTo1NSBwLuKAr20uOzI7MTE1NDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Cant" type="Real" array="False" size=""/>
+            <output expression="&quot;introduzca la cantidad de Datos a ordenar&quot;" newline="True"/>
+            <input variable="Cant"/>
+            <declare name="Numeros" type="Real" array="True" size="Cant"/>
+            <call expression="IntroDatos(Cant, Numeros)"/>
+            <call expression="Ordenamiento(Numeros, Cant)"/>
+            <call expression="Imprimir(Numeros, Cant)"/>
+        </body>
+    </function>
+    <function name="Imprimir" type="None" variable="">
+        <parameters>
+            <parameter name="Numeros" type="Real" array="True"/>
+            <parameter name="Cant" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <for variable="I" start="0" end="Cant-1" direction="inc" step="1">
+                <output expression="Numeros[I]" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="IntroDatos" type="None" variable="">
+        <parameters>
+            <parameter name="Cant" type="Real" array="False"/>
+            <parameter name="Numeros" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <for variable="I" start="0" end="Cant-1" direction="inc" step="1">
+                <output expression="&quot;Digite el numero de memoria &quot; &amp;I" newline="True"/>
+                <input variable="Numeros[I]"/>
+            </for>
+        </body>
+    </function>
+    <function name="Ordenamiento" type="None" variable="">
+        <parameters>
+            <parameter name="Numeros" type="Real" array="True"/>
+            <parameter name="Cant" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="I, X, O" type="Real" array="False" size=""/>
+            <for variable="I" start="0" end="Cant-2" direction="inc" step="1">
+                <for variable="X" start="I+1" end="Cant-1" direction="inc" step="1">
+                    <if expression="Numeros[I] &gt; Numeros[X]">
+                        <then>
+                            <assign variable="O" expression="Numeros[I]"/>
+                            <assign variable="Numeros[I]" expression="Numeros[X]"/>
+                            <assign variable="Numeros[X]" expression="O"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
